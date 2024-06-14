@@ -1,0 +1,490 @@
+/* General Styles */
+body {
+    background-color: #fafafa;
+}
+
+.product-page-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 0.5rem 1.5rem;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #feafeafe;
+}
+
+/* Product Content and Layout */
+.product-content {
+    position: relative;
+}
+
+.product-block,
+.product-details {
+    width: calc(50% - 15px***REMOVED***;
+}
+
+.product-block {
+    min-height: 689px;
+    margin-left: 0;
+}
+
+.product-details {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+/* Card Styles */
+.card {
+    margin: 0 1rem 0 0.2rem;
+    margin-bottom: 0;
+    border-radius: 1rem;
+    padding: 4rem;
+    box-shadow: 0 0 0.3rem 0.3rem #30303005;
+    background-color: #fff;
+}
+
+.card--sticky {
+    position: sticky;
+    top: -1rem;
+    transition: top 0.3s ease-out;
+}
+
+/* Product Gallery */
+.product-gallery,
+.product-description {
+    display: block;
+    text-align: center;
+    box-shadow: 0 0 0.3rem 0.3rem #30303005;
+    background-color: #fff;
+    margin: 0 0.2rem 3rem 1rem;
+    border-radius: 1rem;
+}
+
+.flex-viewport {
+    display: grid;
+    justify-content: center;
+    width: 75%;
+    overflow: hidden;
+}
+
+.woocommerce-product-gallery {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.woocommerce-product-gallery__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.woocommerce-product-gallery__image img {
+    max-width: 80%;
+    max-height: 600px;
+    padding: 1rem;
+}
+
+.zoomImg {
+    display: none !important;
+}
+
+/* Thumbnail Navigation */
+.flex-control-nav {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem 0;
+    min-height: 300px;
+    box-shadow: 0.3rem 0 0.2rem 0.1rem #00000010;
+}
+
+.flex-control-nav li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.flex-control-nav img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+
+.flex-control-nav img:hover,
+.flex-control-nav img.flex-active {
+    border-color: #33333380;
+    border-radius: 0.3rem;
+}
+
+.flex-control-nav {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.flex-control-nav::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Product Gallery Trigger */
+.woocommerce-product-gallery__trigger {
+    display: none;
+}
+
+/* Installments */
+.installments-price {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Product Variants */
+.variation-buttons {
+    margin: 10px 0;
+}
+
+.variation-buttons button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.variation-buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+.variation-buttons button.active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.reset_variations {
+    display: none;
+}
+
+/* Product Quantity */
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-wrapper button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #606060;
+}
+
+.quantity-wrapper button:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity-display {
+    text-align: center;
+    font-size: 16px;
+    padding: 0.25rem 1rem;
+    border: 1px solid #cacaca;
+    font-weight: 900;
+    color: #404040;
+    margin: 0 0.2rem;
+}
+
+/* Miscellaneous */
+.fas.fa-check {
+    background-color: #007bff80;
+    color: #fff;
+    border-radius: 100%;
+    padding: 0.2rem;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 35%;
+    left: 0.5rem;
+}
+
+.label {
+    text-align: left;
+    color: #656565;
+    font-weight: 500;
+    padding-right: 1rem;
+}
+
+.quantity-td {
+    display: flex;
+}
+
+.single_add_to_cart_button.button.alt {
+    width: 100%;
+    background-color: #00ab66 !important;
+    height: 3rem;
+    border-radius: 0.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1***REMOVED***;
+    }
+    50% {
+        transform: scale(1.05***REMOVED***;
+    }
+    100% {
+        transform: scale(1***REMOVED***;
+    }
+}
+
+
+/* Price Display */
+.price {
+    display: flex;
+    flex-direction: column;
+}
+
+.price bdi,
+.price ins {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #454545;
+}
+
+.price del .woocommerce-Price-amount.amount bdi {
+    color: #aaaaaa;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.price del {
+    color: #aaaaaa;
+}
+
+/* Product Title */
+.product-title {
+    font-size: 1.8rem;
+    color: #454545;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-title span {
+    position: relative;
+}
+
+/* Savings Amount */
+.savings-amount {
+    color: white;
+    background-color: rgb(206, 206, 206***REMOVED***;
+    text-align: center;
+    border-radius: 0.8rem;
+    padding: 0.3rem;
+    font-size: 0.85rem;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 800;
+    margin-top: 0.1rem;
+}
+
+.card.card--sticky table {
+    padding-bottom: 1.5rem;
+}
+
+/* Installments Images */
+.installments-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+}
+
+.installments-img img {
+    max-width: 2.5rem;
+    margin: 0rem 0.1rem;
+    box-shadow: 0 0.1rem 0.2rem 0.1rem #00000020;
+    border-radius: 0.35rem;
+}
+
+/* Installments Table */
+.installments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.installments-table th,
+.installments-table td {
+    padding: 8px 2px;
+    white-space: nowrap;
+}
+
+/* Collapsible Content */
+details summary {
+    cursor: pointer;
+}
+
+.details-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;  
+    border: 1px solid #dadada90;
+    border-radius: 1rem;
+    padding: 0.8rem;  
+}
+
+details[open***REMOVED*** .collapsible-content {
+    display: table-row;
+}
+
+.collapsible-content {
+    display: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    list-style: none; /* Remove the default marker */
+}
+
+.summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.installments-content tr {
+    display: flex;
+}    
+
+.summary-title {
+    font-weight: 500;
+    color: #606060;
+}
+
+.installments-content {
+    display: flex;
+    color: #30303099;
+    padding: 1rem 0;
+    font-weight: 500;
+    font-size: 0.7rem;
+    border-top: 1px solid #dadada80;
+    margin-top: 1.5rem;
+    padding-bottom: 0 !important;
+}
+
+details[open***REMOVED*** .collapsible-content {
+    display: flex;
+}
+
+.installments-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.summary-final-content {
+    display: flex;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #dadada80;
+    justify-content: space-between;
+}
+
+/* Delivery Time */
+.tempofrete {
+    border-top: 1px solid #dadada80;
+    padding-top: 1.5rem;
+    margin-top: 20px;
+}
+
+.tempofrete i {
+    color: #007bff;
+    margin-right: 0.5rem;
+    width: 1rem;
+    border: 1px solid #007bff40;
+    display: flex;
+    padding: 0.2rem 1rem;
+    justify-content: center;
+}
+
+.custom-address,
+.colorfretegeral {
+    color: #555;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.colorfretegeral {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#location {
+    font-weight: 600;
+}
+
+/* Installments Content */
+.valor-installments-left,
+.valor-installments-right {
+    font-weight: 600;
+    text-align: center;
+}
+
+.number-installments-left {
+    text-align: left;
+    width: 35%;
+}
+
+.fees-includes-left {
+    text-align: right;
+    width: 40%;
+}
+
+.number-installments-right {
+    text-align: right;
+    width: 30%;
+}
+
+.fees-includes-right {
+    text-align: right;
+    width: 35%;
+}
+
+.valor-installments-right {
+    width: 35%;
+    text-align: center;
+}
+
+#final-price {
+    color: #353535;
+}

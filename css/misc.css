@@ -1,0 +1,51 @@
+/*Resetar padrões*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/*Estilização 404*/
+.error-404-content {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1***REMOVED***;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.error-404-content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.error-404-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.error-404-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.error-404-content a:hover {
+    background-color: #005a87;
+}

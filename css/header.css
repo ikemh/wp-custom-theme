@@ -1,0 +1,146 @@
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 0.5vh solid;
+    height: 7rem;
+    border-image: linear-gradient(to right, yellow, red, blue***REMOVED*** 1;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100rem;
+    max-width: 100%;
+}
+
+.header-left img {
+    max-width: 8rem;
+}
+
+.header-center nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-center nav ul li {
+    margin: 0 15px;
+}
+
+.header-center nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: large;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right .search-form {
+    display: flex;
+    align-items: center;
+}
+
+.header-right .search-field {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.header-right .search-submit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.header-right .cart-button {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+.header-right .cart-button .fa-shopping-cart {
+    font-size: 24px;
+}
+
+.header-right .cart-count {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-weight: 600;
+    position: absolute;
+    left: 1rem;
+    bottom: 0.8rem
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 802px***REMOVED*** {
+
+    .header-left {
+        order: 2;
+    }
+
+
+    .header-center {
+        order: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-center nav {
+        display: none;
+    }
+
+    .header-center .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .header-right .search-field {
+        display: none;
+    }
+
+    .header-right .search-submit {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+    }
+    .header-right {
+    order: 3;
+    }
+}
+
+/* Estilos para o menu hamburger */
+@media (min-width: 803px***REMOVED*** {
+.header-center .menu-toggle {
+    display: none;
+}
+}
+.header-center nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-center .main-menu li {
+    margin: 10px 0;
+}
+
