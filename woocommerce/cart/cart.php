@@ -89,23 +89,17 @@ get_header(); ?>
                                             if ($_product->is_sold_individually()) {
                                                 $product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
                                             } else {
-                                                $product_quantity = '<div class="quantity-wrapper">
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th class="label" style="width: 116px;">
-                                                                    <span class="quantity-label">Quantidade</span>
-                                                                </th>
-                                                                <td class="quantity-td">
-                                                                    <button type="button" class="qtyminus">-</button>
-                                                                    <span class="quantity-display">' . $cart_item['quantity'] . '</span>
-                                                                    <button type="button" class="qtyplus">+</button>
-                                                                    <input type="number" id="quantity_' . esc_attr($cart_item_key) . '" class="input-text qty text" name="cart[' . $cart_item_key . '][qty]" value="' . esc_attr($cart_item['quantity']) . '" aria-label="' . esc_attr__('Product quantity', 'woocommerce') . '" size="4" min="0" max="' . esc_attr($_product->get_max_purchase_quantity()) . '" step="1" placeholder="" inputmode="numeric" autocomplete="off" style="display: none;">
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>';
+                                                $product_quantity = woocommerce_quantity_input(
+                                                    array(
+                                                        'input_name'   => "cart[{$cart_item_key}][qty]",
+                                                        'input_value'  => $cart_item['quantity'],
+                                                        'max_value'    => $_product->get_max_purchase_quantity(),
+                                                        'min_value'    => '0',
+                                                        'product_name' => $_product->get_name(),
+                                                    ),
+                                                    $_product,
+                                                    false
+                                                );
                                             }
 
                                             echo apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item); // PHPCS: XSS ok.
@@ -177,4 +171,3 @@ get_header(); ?>
 
 <?php
 get_footer();
-?>
