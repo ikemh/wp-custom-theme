@@ -30,8 +30,8 @@
         <div class="footer-column">
         <h4>CENTRAL DE ATENDIMENTO</h4>
             <p>Atendimentos: seg. à sáb. 09 às 18h</p>
-            <p>E-mail: contato@domofertas.com</p>
-            <p>Telefone: (51***REMOVED***99545-5466</p>
+            <p>E-mail: <?php echo $GLOBALS['storeEmail'***REMOVED***; ?></p>
+            <p>Telefone: <?php echo $GLOBALS['storePhone'***REMOVED***; ?></p>
         </div>
 </div>
         <div class="footer-down">
@@ -44,7 +44,7 @@
             <img src="<?php echo get_template_directory_uri(***REMOVED***; ?>/assets/images/footer/elo.png" alt="payment-methods">
             <img src="<?php echo get_template_directory_uri(***REMOVED***; ?>/assets/images/footer/pix.png" alt="payment-methods">
             </div>
-            <p>©2024 Dom Ofertas | CNPJ 46.141.348/0001-08</p>
+            <p>©2024 <?php echo $GLOBALS['storeName'***REMOVED***; ?> | CNPJ <?php echo $GLOBALS['storeCnpj'***REMOVED***; ?></p>
         </div>
         </div>
     </div>
