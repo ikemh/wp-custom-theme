@@ -20,6 +20,6 @@ export function initSlider() {
         if (dots[slideIndex-1]) {
             dots[slideIndex-1].className += " active";
         }
-        setTimeout(showSlides, 5000); // Muda a imagem a cada 5 segundos
+        setTimeout(showSlides, 5000);
     }
 }

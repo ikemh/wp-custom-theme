@@ -1,3 +1,4 @@
+//Ajustar altura do menu lateral da galeria de imagens do produto
 export function initNavHeightSync() {
     function syncNavHeight() {
         var mainImage = document.querySelector('.woocommerce-product-gallery__image.flex-active-slide');
@@ -7,11 +8,9 @@ export function initNavHeightSync() {
         }
     }
 
-    // Chamar a função ao carregar e ao redimensionar a janela
     syncNavHeight();
     window.addEventListener('resize', syncNavHeight);
 
-    // Também chamar a função após a alteração das imagens (se houver zoom)
     var observer = new MutationObserver(syncNavHeight);
     observer.observe(document.querySelector('.woocommerce-product-gallery__wrapper'), {
         attributes: true,
