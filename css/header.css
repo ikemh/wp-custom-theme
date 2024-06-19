@@ -79,14 +79,17 @@
 .header-right .cart-count {
     margin-left: 5px;
     font-size: 0.9rem;
-    background-color: blue;
+    background-color: #0000ff;
     color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
+    border-radius: 100%;
+    width: 1.3rem;
+    height: 1.3rem;
     font-weight: 600;
     position: absolute;
     left: 1rem;
-    bottom: 0.8rem
+    bottom: 0.8rem;
+    text-align: center;
+    align-content: center;
 }
 
 /* Estilos responsivos para dispositivos móveis */

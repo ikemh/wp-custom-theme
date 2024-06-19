@@ -24,9 +24,10 @@ function dom_ofertas_theme_scripts() {
         wp_enqueue_script('single-product-script', get_template_directory_uri() . '/js/single-product.js', array('jquery'), null, true);
     }
 
-    if (is_page('cart')) {
+    if (is_cart()) {
         wp_enqueue_style('dom-ofertas-cart', get_template_directory_uri() . '/css/cart.css', array(), null);
-        // Adicione outros scripts específicos para a página do carrinho, se necessário
+        wp_enqueue_script('cart-script', get_template_directory_uri() . '/js/cart.js', array('jquery'), null, true);
+
     }
 
     // Adicione outras condições conforme necessário
@@ -36,7 +37,7 @@ add_action('wp_enqueue_scripts', 'dom_ofertas_theme_scripts');
 // Add type="module" to scripts
 function add_module_type_to_scripts($tag, $handle, $src) {
     // List of script handles to add type="module"
-    $module_scripts = array('common-script', 'front-page-script', 'single-product-script');
+    $module_scripts = array('common-script', 'front-page-script', 'single-product-script', 'cart-script');
 
     if (in_array($handle, $module_scripts)) {
         $tag = '<script type="module" src="' . esc_url($src) . '"></script>';

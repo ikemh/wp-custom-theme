@@ -60,10 +60,6 @@
     background-color: #f3f3f3;
 }
 
-.shop_table tbody td {
-    border-bottom: 1px solid #ddd;
-}
-
 .product-thumbnail img {
     max-width: 100px;
     border-radius: 5px;
@@ -83,32 +79,50 @@
     color: #666;
 }
 
-.product-quantity .quantity-wrapper {
+.quantity {
+    display: none;
+}
+
+.quantity-td {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-.product-quantity .quantity-wrapper table {
-    width: 100%;
-}
-
-.product-quantity .quantity-wrapper td {
-    display: flex;
-    align-items: center;
-}
-
-.product-quantity .quantity-wrapper .qtyminus,
-.product-quantity .quantity-wrapper .qtyplus {
-    background-color: #0073aa;
-    color: #fff;
-    border: none;
+.quantity-wrapper button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
     padding: 5px 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #606060;
 }
 
-.product-quantity .quantity-wrapper .qtyminus:hover,
-.product-quantity .quantity-wrapper .qtyplus:hover {
-    background-color: #005177;
+.quantity-wrapper button:hover {
+    background-color: #e0e0e0;
+}
+
+.woocommerce-cart-form__cart-item.cart_item .quantity-wrapper .quantity-input {
+    width: 8vh;
+    box-sizing:content-box;
+    text-align: center;
+    font-size: 16px;
+    padding: 0.30rem 0.20rem;
+    border: 1px solid #cacaca;
+    font-weight: 900;
+    color: #404040;
+    margin: 0 0.2rem;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .product-remove .remove {
@@ -211,35 +225,4 @@
 
 .wc-proceed-to-checkout .checkout-button:hover {
     background-color: #005177;
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-    .shop_table th, .shop_table td {
-        display: block;
-        width: 100%;
-    }
-
-    .shop_table thead {
-        display: none;
-    }
-
-    .shop_table tbody tr {
-        margin-bottom: 20px;
-        border-bottom: 2px solid #ddd;
-    }
-
-    .shop_table tbody td {
-        padding: 10px;
-        border: none;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .product-thumbnail img {
-        max-width: 70px;
-    }
-
-    .coupon .input-text {
-        width: 100%;
-    }
 }

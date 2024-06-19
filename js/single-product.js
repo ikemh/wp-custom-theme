@@ -1,5 +1,5 @@
 import { initNavHeightSync } from './modules/single-product/nav-height-sync.js';
-import { initQuantityUpdate } from './modules/single-product/quantity-update.js';
+import { initCardSticky } from './modules/single-product/card-sticky.js';
 import { initPriceCalculator } from './modules/single-product/price-calculator.js';
 import { initProductVariants } from './modules/single-product/product-variants.js';
 import { initProductQuantity } from './modules/single-product/product-quantity.js';
@@ -10,7 +10,7 @@ import { initLocation } from './modules/single-product/location.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     initNavHeightSync();
-    initQuantityUpdate();
+    initCardSticky();
     initPriceCalculator();
     initProductVariants();
     initProductQuantity();

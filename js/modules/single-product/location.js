@@ -1,21 +1,19 @@
-export function initLocation() {
-    // Function to get the user's location based on IP
-    function getLocation() {
-        console.log("Chamando API de localização.");
-        $.get("https://ipapi.co/json/", function(response) {
-            console.log("Resposta da API:", response);
-            var city = response.city;
-            var region = response.region;
-            if (city && region) {
-                $('#location').text(city + ', ' + region);
-            } else {
-                $('#location').text('sua localização');
-            }
-        }, "json").fail(function() {
-            $('#location').text('sua localização');
-        });
-    }
+    export function initLocation() {
+        // Function to get the user's location based on IP
+        function getLocation() {
+            jQuery.get("https://ipapi.co/json/", function(response) {
+                var city = response.city;
+                var region_code = response.region_code;
+                if (city && region_code) {
+                    jQuery('#location').text(` para  ${city}, ${region_code} e região`);
+                } else {
+                    jQuery('#location').text(' para todo o Brasil');
+                }
+            }, "json").fail(function() {
+                jQuery('#location').text(' para todo o Brasil');
+            });
+        }
 
-    // Call the location function on page load
-    getLocation();
-}
+        // Call the location function on page load
+        getLocation();
+    }

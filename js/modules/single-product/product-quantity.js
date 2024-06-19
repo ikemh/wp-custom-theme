@@ -30,10 +30,8 @@ export function initProductQuantity() {
         decrementButton.className = 'qtyminus';
         td.appendChild(decrementButton);
 
-        const quantityDisplay = document.createElement('span');
-        quantityDisplay.className = 'quantity-display';
-        quantityDisplay.textContent = quantityInput.value;
-        td.appendChild(quantityDisplay);
+        td.appendChild(quantityInput);
+        quantityInput.className = 'quantity-input'
 
         const incrementButton = document.createElement('button');
         incrementButton.type = 'button';
@@ -42,8 +40,7 @@ export function initProductQuantity() {
         td.appendChild(incrementButton);
 
         // Adicionar o input de quantidade ao wrapper, mas sem exibir
-        td.appendChild(quantityInput);
-        quantityInput.style.display = 'none';
+
 
         tr.appendChild(td);
         tbody.appendChild(tr);
@@ -54,8 +51,7 @@ export function initProductQuantity() {
         decrementButton.addEventListener('click', function() {
             let currentValue = parseInt(quantityInput.value);
             if (!isNaN(currentValue) && currentValue > 1) {
-                quantityInput.value = currentValue - 1;
-                quantityDisplay.textContent = quantityInput.value;
+                quantityInput.value = currentValue;
                 quantityInput.dispatchEvent(new Event('change')); // Atualizar o valor do input
             }
         });
@@ -63,8 +59,7 @@ export function initProductQuantity() {
         incrementButton.addEventListener('click', function() {
             let currentValue = parseInt(quantityInput.value);
             if (!isNaN(currentValue)) {
-                quantityInput.value = currentValue + 1;
-                quantityDisplay.textContent = quantityInput.value;
+                quantityInput.value = currentValue;
                 quantityInput.dispatchEvent(new Event('change')); // Atualizar o valor do input
             }
         });

@@ -131,7 +131,7 @@
                                         </div>
                                         <div class="tempofrete">
                                             <span class="custom-address tempofrete1">
-                                                <i class="fas fa-shipping-fast"></i><p>Frete Grátis para <span id="location">.</span>.</p>
+                                                <i class="fas fa-shipping-fast"></i><p>Frete Grátis<span id="location"></span>.</p>
                                             </span>
                                             <span class="colorfretegeral">
                                                 <i class="fas fa-medal"></i><p>Garantia de 30 dias direto em nossa loja.</p>
