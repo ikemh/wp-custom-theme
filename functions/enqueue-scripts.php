@@ -28,6 +28,12 @@ function dom_ofertas_theme_scripts() {
         wp_enqueue_style('dom-ofertas-cart', get_template_directory_uri() . '/css/cart.css', array(), null);
         wp_enqueue_script('cart-script', get_template_directory_uri() . '/js/cart.js', array('jquery'), null, true);
 
+        // Gerar o nonce e passar para o script cart.js
+        $nonce = wp_create_nonce('update-cart-nonce');
+        wp_localize_script('cart-script', 'cart_quantity_params', array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'nonce' => $nonce,
+        ));
     }
 
     // Adicione outras condições conforme necessário
