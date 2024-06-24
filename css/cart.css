@@ -283,7 +283,7 @@ td.product-subtotal, th.product-subtotal {
 
 .cart_totals th, .cart_totals td {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: none !important;
 }
 
 .cart_totals .order-total th, .cart_totals .order-total td {

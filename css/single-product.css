@@ -49,7 +49,7 @@ body {
     margin: 0 1rem 0 0.2rem;
     margin-bottom: 0;
     border-radius: 1rem;
-    padding: 4rem;
+    padding: 2.5rem 4rem;
     box-shadow: 0 0 0.3rem 0.3rem #30303005;
     background-color: #fff;
 }
@@ -190,20 +190,20 @@ body {
 }
 
 .quantity-wrapper button {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    border: none;
     padding: 5px 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #606060;
+    background-color: #fff;
 }
 
 .quantity-wrapper button:hover {
-    background-color: #e0e0e0;
+    color: #151515;
 }
 
 .quantity {
@@ -211,12 +211,12 @@ body {
 }
 
 .quantity-input {
-    width: 10vh;
+    width: 9vh;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.1rem;
     padding: 0.25rem 0.2rem;
-    border: 1px solid #cacaca;
-    font-weight: 900;
+    border: 1px solid #dadada;
+    font-weight: 600;
     color: #404040;
     margin: 0 0.2rem;
     -moz-appearance: textfield;
@@ -231,13 +231,13 @@ body {
 
 /* Miscellaneous */
 .fas.fa-check {
-    background-color: #007bff80;
+    background-color: #007bff;
     color: #fff;
     border-radius: 100%;
     padding: 0.2rem;
     font-size: 0.6rem;
     position: absolute;
-    top: 35%;
+    top: 32%;
     left: 0.5rem;
 }
 
@@ -284,7 +284,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2rem;
-    color: #454545;
+    color: #00ab66;
 }
 
 .price del .woocommerce-Price-amount.amount bdi {
@@ -315,7 +315,7 @@ body {
 /* Savings Amount */
 .savings-amount {
     color: white;
-    background-color: rgb(206, 206, 206);
+    background-color: #00ab6690;
     text-align: center;
     border-radius: 0.8rem;
     padding: 0.3rem;
@@ -338,10 +338,11 @@ body {
 }
 
 .installments-img img {
-    max-width: 2.5rem;
+    max-width: 2.2rem;
     margin: 0rem 0.1rem;
     box-shadow: 0 0.1rem 0.2rem 0.1rem #00000020;
-    border-radius: 0.35rem;
+    border-radius: 0.2rem;
+    opacity: 0.95;
 }
 
 /* Installments Table */
@@ -369,6 +370,11 @@ details summary {
     border: 1px solid #dadada90;
     border-radius: 1rem;
     padding: 0.8rem;  
+    margin-top: 1rem;
+}
+
+.details-wrapper th {
+    width: 90%;
 }
 
 details[open] .collapsible-content {
@@ -446,6 +452,10 @@ details[open] .collapsible-content {
     display: flex;
     padding: 0.2rem 1rem;
     justify-content: center;
+}
+
+.tempofrete span p {
+    font-weight: 500;
 }
 
 .custom-address,

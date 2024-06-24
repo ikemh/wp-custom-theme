@@ -69,11 +69,15 @@
 
 .header-right .cart-button {
     display: flex;
-    align-items: center;
+    align-items: end;
     margin-left: 15px;
     text-decoration: none;
     color: #fff;
     position: relative;
+}
+
+.header-right .cart-button span {
+    padding-left: 0.35rem;
 }
 
 .header-right .cart-button .fa-shopping-cart {
@@ -88,8 +92,8 @@
     min-width: 1.5rem;
     font-weight: 600;
     position: absolute;
-    left: 0.8rem;
-    bottom: 0.8rem;
+    left: 1rem;
+    bottom: 1rem;
     padding:  0.1rem 0.2rem;
     text-align: center;
     align-content: center;

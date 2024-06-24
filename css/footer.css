@@ -23,6 +23,7 @@
     align-items: flex-start;
     padding-bottom: 6rem;
     width: 100rem;
+    max-width: 100%;
 } 
 
 
