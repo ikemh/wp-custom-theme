@@ -1,7 +1,7 @@
 <?php
 // Custom add to cart text
 function custom_add_to_cart_text() {
-    return __('COMPRAR', 'woocommerce');
+    return __('COMPRAR AGORA', 'woocommerce');
 }
 add_filter('woocommerce_product_single_add_to_cart_text', 'custom_add_to_cart_text');
 add_filter('woocommerce_product_add_to_cart_text', 'custom_add_to_cart_text');
@@ -23,19 +23,6 @@ function add_custom_body_classes($classes) {
     return $classes;
 }
 add_filter('body_class', 'add_custom_body_classes');
-
-// Custom WooCommerce template loader
-add_filter('template_include', 'override_cart_template', 100);
-
-function override_cart_template($template) {
-    if (is_cart()) {
-        $custom_template = get_stylesheet_directory() . '/woocommerce/cart/cart.php';
-        if (file_exists($custom_template)) {
-            return $custom_template;
-        }
-    }
-    return $template;
-}
 
 // Função para atualizar a quantidade do carrinho via AJAX
 function ajax_update_cart_quantity() {

@@ -7,6 +7,7 @@ import { initQuantityButtons } from './modules/single-product/quantity-buttons.j
 import { initInstallments } from './modules/single-product/installments.js';
 import { initLabelWidth } from './modules/single-product/label-width.js';
 import { initLocation } from './modules/single-product/location.js';
+import { initCustonBtn } from './modules/single-product/custom-checkout-btn.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     initNavHeightSync();
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initInstallments();
     initLabelWidth();
     initLocation();
+    initCustonBtn();
 });
