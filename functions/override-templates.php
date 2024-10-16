@@ -1,13 +1,13 @@
 <?php
 // Função para sobrescrever templates do WooCommerce
 function override_woocommerce_templates($template) {
-    // Sobrescrever o template do checkout
+    /* Sobrescrever o template do checkout
     if (is_checkout()) {
         $checkout_template = get_stylesheet_directory() . '/woocommerce/checkout/form-checkout.php';
         if (file_exists($checkout_template)) {
             return $checkout_template;
         }
-    }
+    } */
 
     // Sobrescrever o template do carrinho
     if (is_cart()) {

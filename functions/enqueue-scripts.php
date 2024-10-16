@@ -24,6 +24,11 @@ function dom_ofertas_theme_scripts() {
         wp_enqueue_script('single-product-script', get_template_directory_uri() . '/js/single-product.js', array('jquery'), null, true);
     }
 
+    if (is_checkout()) {
+        wp_enqueue_style('dom-ofertas-checkout', get_template_directory_uri() . '/css/checkout.css', array(), null);
+        wp_enqueue_script('checkout-script', get_template_directory_uri() . '/js/checkout.js', array('jquery'), null, false);
+    }
+
     if (is_cart()) {
         wp_enqueue_style('dom-ofertas-cart', get_template_directory_uri() . '/css/cart.css', array(), null);
         wp_enqueue_script('cart-script', get_template_directory_uri() . '/js/cart.js', array('jquery'), null, true);
